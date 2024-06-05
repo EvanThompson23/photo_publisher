@@ -25,6 +25,8 @@ class MinimalSubscriber(Node):
         img = self.br.compressed_imgmsg_to_cv2(msg)
         print(type(img))
         print(getsizeof(img))
+        cv2.imwrite('./PNGs/recieved.jpeg', img)
+        
 
 def main(args=None):
     rclpy.init(args=args)
